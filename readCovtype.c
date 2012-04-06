@@ -203,7 +203,7 @@ DataSet* read_dataset(char *filename)
                
             } else if (Cover_Type==5) {
                 dset->output[i][0] = 0.1;
-                dset->output[i][1] = 0.9;
+                dset->output[i][1] = 0.1;
                 dset->output[i][2] = 0.1;
                 dset->output[i][3] = 0.1;
                 dset->output[i][4] = 0.9;

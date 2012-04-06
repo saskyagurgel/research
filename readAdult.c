@@ -42,7 +42,7 @@ DataSet* read_dataset(char *filename)
     int     done = FALSE, i, j, k;
     double  fnlwgt, education_num, capital_gain, capital_loss, hours_per_week, age;
     char workclass[40],  education[40],  marital_status[40], occupation[40], relationship[40], race[40], sex[40], native_country[40];
-    char    buffer[140];
+    char    buffer[240];
     DataSet *dset;
         
     dset = (DataSet*) malloc(sizeof(DataSet));
@@ -60,7 +60,7 @@ DataSet* read_dataset(char *filename)
        
     // count lines in file to allocate dataset arrays
     i = 0;
-    while (fgets(buffer, 140, f) != NULL)
+    while (fgets(buffer, 240, f) != NULL)
         ++i;
 
     if (!feof(f) || ferror(f)) {
